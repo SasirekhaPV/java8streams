@@ -21,10 +21,14 @@ Explain Java 8 Streams ?
         );
         
         Stream<Employee> employeeListStream = employeeList.stream();
-        employeeListStream.map(employee -> employee.getName()).forEach(System.out::println);
+        employeeListStream
+                          .map(employee -> employee.getName())
+                          .forEach(System.out::println);
         
         // Will result in java.lang.IllegalStateException: stream has already been operated upon or closed
-        employeeListStream.map(employee -> employee.getName()).forEach(System.out::println);
+        employeeListStream
+                          .map(employee -> employee.getName())
+                          .forEach(System.out::println);
 ```
 6. Streams are more declarative style or more expressive.
 ```
