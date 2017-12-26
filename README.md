@@ -13,14 +13,19 @@ Explain Java 8 Streams ?
 5. The elements of a stream are only visited ONCE during the life of a stream. Like an Iterator, a new stream must be re-generated to revisit the same elements of the source.
 
 6. Streams are more declarative style or more expressive.
+```
    Example : 
             getJuniors(){
               return employees.Stream()
                               .filter(employee -> employee.getRole().equals("Junior Engineer"))
                               .collect(Collectors.toList());
             }
+```
 7. Stream encourages less mutability i.e not using multiple variables assignment during computation eventually reduces the side effect.
 
-8. There are two types of Streams -> Sequential , Parallel.
+8. There are two types of Streams -> 
+```
+Sequential , Parallel.
+```
 
 
