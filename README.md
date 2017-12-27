@@ -18,7 +18,7 @@ Explain Java 8 Streams ?
                               .filter(employee -> employee.getRole().equals("Junior Engineer"))
                               .collect(Collectors.toList());
             }
-            ```
+```
 6. Stream encourages less mutability i.e not using multiple variables assignment during computation eventually reduces the side effect.
 
 7. There are different types of Streams ->
