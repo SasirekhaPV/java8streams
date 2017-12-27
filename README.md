@@ -1,4 +1,3 @@
-Java8streams
 
 1. Explain Java 8 Streams ?
 Java 8 Streams lets you process the data in a declarative way and streams can leverage multi-core architectures without you having to write a single line of multithread code.
@@ -36,10 +35,10 @@ Example :
                               .filter(employee -> employee.getRole().equals("Junior Engineer"))
                               .collect(Collectors.toList());
             }
-            ```
-            
+          
+   ```           
 8. The elements of a stream are only visited ONCE during the life of a stream. Like an Iterator, a new stream must be re-generated to revisit the same elements of the source.
-        ```
+  ```      
         List<Employee> employeeList = Arrays.asList(
                 new Employee("John", 25, "CAP", new BigDecimal(4000.00)),
                 new Employee("David", 25, "CAP", new BigDecimal(5000.00)),
@@ -56,5 +55,4 @@ Example :
         // Will result in java.lang.IllegalStateException: stream has already been operated upon or closed
         employeeListStream
                           .map(employee -> employee.getName())
-                          ```
                           .forEach(System.out::println);
