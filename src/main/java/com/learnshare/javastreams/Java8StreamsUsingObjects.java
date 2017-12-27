@@ -1,4 +1,4 @@
-package com.learnshare.java8streams;
+package com.learnshare.javastreams;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -24,8 +24,8 @@ public class Java8StreamsUsingObjects {
 
         //Before Java 8
         List<String> employeesWhosAgeIsAround30 = new ArrayList<>();
-        for(Employee employee : employeeList){
-            if(employee.getAge() >= 30){
+        for (Employee employee : employeeList) {
+            if (employee.getAge() >= 30) {
                 employeesWhosAgeIsAround30.add(employee.getName());
             }
         }
@@ -34,11 +34,11 @@ public class Java8StreamsUsingObjects {
         System.out.println(employeesWhosAgeIsAround30);
 
         //Using Java 8
-        List<String> employeesWhosAgeIsAround30Result = employeeList.stream()
-                                                                     .filter(employee -> employee.getAge() >= 30)
-                                                                     .map(employee -> employee.getName())
-                                                                     .collect(Collectors.toList());
+        employeeList.stream()
+                .filter(employee -> employee.getAge() >= 30)
+                .map(employee -> employee.getName())
+                .forEach(System.out::println);
+
         System.out.println("Employees whose age is around 30 using Streams ");
-        System.out.println(employeesWhosAgeIsAround30Result);
     }
 }

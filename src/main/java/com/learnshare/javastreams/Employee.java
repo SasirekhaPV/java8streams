@@ -1,4 +1,4 @@
-package com.learnshare.java8streams;
+package com.learnshare.javastreams;
 
 import java.math.BigDecimal;
 
