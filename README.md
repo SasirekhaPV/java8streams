@@ -1,6 +1,8 @@
 
-1. Explain Java 8 Streams ?
-Java 8 Streams lets you process the data in a declarative way and streams can leverage multi-core architectures without you having to write a single line of multithread code.
+
+Explain Java 8 Streams ?
+
+1. Java 8 Streams lets you process the data in a declarative way and streams can leverage multi-core architectures without you having to write a single line of multithread code.
 
 2. Stream does not store elements. It simply conveys elements from a source such as a data structure, an array, or an I/O channel, through a pipeline of operations.
 
@@ -9,7 +11,7 @@ Java 8 Streams lets you process the data in a declarative way and streams can le
 4. Stream is lazy and evaluates code only when required.
 
 5. Streams are more declarative style or more expressive.
-   ```
+```
    Example : 
             getJuniors(){
               return employees.Stream()
