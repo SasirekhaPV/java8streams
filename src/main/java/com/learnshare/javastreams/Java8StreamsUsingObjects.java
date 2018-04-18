@@ -4,16 +4,15 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Java8StreamsUsingObjects {
 
     public static void main(String[] args) {
 
-        convertListOfObjectsUsingStream();
+        convertListOfObjectsAndFilterUsingStream();
     }
 
-    private static void convertListOfObjectsUsingStream() {
+    private static void convertListOfObjectsAndFilterUsingStream() {
         List<Employee> employeeList = Arrays.asList(
                 new Employee("John", 25, "CAP", new BigDecimal(4000.00)),
                 new Employee("David", 25, "CAP", new BigDecimal(5000.00)),
@@ -24,6 +23,7 @@ public class Java8StreamsUsingObjects {
 
         //Before Java 8
         List<String> employeesWhosAgeIsAround30 = new ArrayList<>();
+
         for (Employee employee : employeeList) {
             if (employee.getAge() >= 30) {
                 employeesWhosAgeIsAround30.add(employee.getName());
